@@ -1,0 +1,10 @@
+{
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/step_definitions"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "esbuild": "^0.24.0"
+  }
+}
