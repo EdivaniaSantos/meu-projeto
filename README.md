@@ -2,13 +2,17 @@
 ## Descrição do Projeto
 
 Este projeto utiliza as seguintes tecnologias:
+  
    •	Linguagem de Programação: JavaScript
+   
    •	Framework Web: Cypress com Cucumber 
+   
    •	Para a Escrita de Cenários Web e API: Gherkin (Cucumber)
+   
    •	Framework para APIs: Cypress
 
 ## Pré-Requisitos
-Certifique-se de ter as seguintes ferramentas instaladas no seu sistema:
+Certifique-se de ter as seguintes ferramentas instaladas:
   1.	Node.js e npm
   2.	Git
   3.	Editor de código: Recomendado usar o Visual Studio Code ou outro editor de sua escolha
@@ -17,22 +21,24 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu sistema:
 
 ## 1. Clonar o Repositório
 Clone o repositório do projeto para a sua máquina local:
-git clone https://github.com/usuario/nome-do-repositorio.git
+git clone https://github.com/EdivaniaSantos/meu-projeto.git
  
- 2. Navegar até o Diretório do Projeto
+## 2. Navegar até o Diretório do Projeto
 Entre na pasta do projeto:
-cd nome-do-repositorio
+cd meu-projeto
 
-3. Instalar as Dependências
+## 3. Instalar as Dependências
 Instale as dependências necessárias, incluindo o Cypress e o Cucumber Preprocessor:
 npm install
 
+## 4. Instalar cypress
+Instale o cypress
+npm install cypress --save-dev
 
-## 4. Configuração do Cypress com Cucumber
+## 5. Configuração do Cypress com Cucumber
 ## Configuração do Cypress
 Abra o Cypress para inicializar e verificar se tudo está funcionando corretamente:
 npx cypress open
-
 
 ## Configuração do Cucumber
 O Cypress com Cucumber é configurado usando o Cypress Cucumber Preprocessor. Para garantir que o Cucumber esteja configurado corretamente, 
