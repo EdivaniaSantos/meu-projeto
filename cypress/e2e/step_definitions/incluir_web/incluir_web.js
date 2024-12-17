@@ -3,11 +3,14 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 // Scenario: 1 Validar inclusão de produtos no carrinho com sucesso 
 Given("que acesse o site de Advantage Online Shopping", () => {
-    cy.visit("https://advantageonlineshopping.com/#/");
+    cy.visit("https://advantageonlineshopping.com#/");
+    cy.get('body').should('be.visible');
 });
 When("realize busca por categoria tablet", () => {
-    cy.get('#mobileSearch > #menuSearch').click();
-    cy.get('#mobileSearch > .roboto-medium').type('Tablet{enter}')
+   // cy.get('#mobileSearch > #menuSearch').click();
+   cy.get('#mobileSearch > #menuSearch').as('menuSearch'); // Armazena o elemento
+   cy.get('@menuSearch').scrollIntoView().click(); // Agora interage com ele
+   cy.get('#mobileSearch > .roboto-medium').type('Tablet{enter}')
 });
 
 And("adicione o produto desejado no carrinho de compras", () => {
@@ -24,17 +27,17 @@ Then("o produto é adicionado ao carrinho com sucesso", () => {
 //Scenario: 2.Validar inclusão de produtos diferentes no carrinho com sucesso 
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
-    
+    cy.get('body').should('be.visible');
 });
 When("incluir produtos diferentes no carrinho de compras", () => {
-    cy.get('#mobileSearch > #menuSearch').click();
+    cy.get('#mobileSearch > #menuSearch').wait(1000).click();
     cy.get('#mobileSearch > .roboto-medium').type('Tablet{enter}')
     cy.get(':nth-child(1) > :nth-child(4) > .productName').click()
     cy.contains('HP ELITEPAD 1000 G2 TABLET').should('be.visible')
     cy.get('.fixedBtn > .roboto-medium').click();
     cy.get('.pages > .ng-scope').click();
     cy.get('#mobileSearch > .roboto-medium').type('MICE{enter}')
-    cy.get(':nth-child(1) > :nth-child(4) > .productName').wait(700).click()
+    cy.get(':nth-child(1) > :nth-child(4) > .productName').wait(10000).click()
     cy.get('.fixedBtn > .roboto-medium').click()
 
 });
@@ -47,6 +50,7 @@ Then("os produtos aparecem no carrinho com sucesso", () => {
 //Scenario: 3. Validar inclusão do mesmo produto mais de uma vez no carrinho com sucesso 
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
+    cy.get('body').should('be.visible');
 });
 When("incluir o mesmo produto mais de uma vez no carrinho de compras", () => {
     cy.get('#mobileSearch > #menuSearch').click();
@@ -66,6 +70,7 @@ Then("é apresentado a quantidade de produto incluso no carrinho com sucesso", (
 //Scenario: 4.Validar que não é possível incluir mais produtos que o limite disponível por itens 
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
+    cy.get('body').should('be.visible');
 });
 When("tentar adicionar quantidade indisponiel de produto", () => {
     cy.get('#mobileSearch > #menuSearch').click();
@@ -87,6 +92,7 @@ Then("apresenta mensagem de erro", () => {
 
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
+    cy.get('body').should('be.visible');
 
 });
 When("selecionar produto esgotado", () => {
