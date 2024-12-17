@@ -3,8 +3,11 @@
 
 Este projeto utiliza as seguintes tecnologias:
    •	Linguagem de Programação: JavaScript
+   
    •	Framework Web: Cypress com Cucumber 
+   
    •	Para a Escrita de Cenários Web e API: Gherkin (Cucumber)
+   
    •	Framework para APIs: Cypress
 
 ## Pré-Requisitos
