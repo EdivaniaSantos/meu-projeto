@@ -12,7 +12,7 @@ Este projeto utiliza as seguintes tecnologias:
    •	Framework para APIs: Cypress
 
 ## Pré-Requisitos
-Certifique-se de ter as seguintes ferramentas instaladas no seu sistema:
+Certifique-se de ter as seguintes ferramentas instaladas:
   1.	Node.js e npm
   2.	Git
   3.	Editor de código: Recomendado usar o Visual Studio Code ou outro editor de sua escolha
@@ -31,7 +31,11 @@ cd meu-projeto
 Instale as dependências necessárias, incluindo o Cypress e o Cucumber Preprocessor:
 npm install
 
-## 4. Configuração do Cypress com Cucumber
+## 4. Instalar cypress
+Instale o cypress
+npm install cypress --save-dev
+
+## 5. Configuração do Cypress com Cucumber
 ## Configuração do Cypress
 Abra o Cypress para inicializar e verificar se tudo está funcionando corretamente:
 npx cypress open
