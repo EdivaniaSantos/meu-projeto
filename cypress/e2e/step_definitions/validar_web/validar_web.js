@@ -3,6 +3,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 // 1. Validar que produtos inclusos no carrinho aparece corretamente na tela de pagamento
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
+    cy.get('body').should('be.visible');
 });
 
 And("inclua produtos incluídos no carrinho", () => {
@@ -29,6 +30,7 @@ Then("os produtos do carrinho são exibidos com sucesso na tela de pagamento", (
 // 2. Validar que não é possível realizar compra sem uma conta criada
 Given("que acesse o site de Advantage Online Shopping", () => {
     cy.visit("https://advantageonlineshopping.com/#/");
+    cy.get('body').should('be.visible');
 });
 
 And("inclua produtos incluídos no carrinho", () => {
