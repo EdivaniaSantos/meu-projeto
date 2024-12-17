@@ -38,6 +38,7 @@ Ferramentas instaladas:
  Instale o cypress e cucumber
 
    npm install cypress --save-dev
+   
    npm install cypress-cucumber-preprocessor --save-dev
 
 ##  Executar os teste no cypress
