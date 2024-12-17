@@ -2,6 +2,7 @@
 ## Descrição do Projeto
 
 Este projeto utiliza as seguintes tecnologias:
+  
    •	Linguagem de Programação: JavaScript
    
    •	Framework Web: Cypress com Cucumber 
