@@ -37,9 +37,10 @@ Ferramentas instaladas:
  ## 4. Instalar Configuração do Cypress com Cucumber
  Instale o cypress e cucumber
 
-   npm install cypress --save-dev
+    npm install cypress --save-dev
+    
    
-   npm install cypress-cucumber-preprocessor --save-dev
+    npm install cypress-cucumber-preprocessor --save-dev
 
 ##  Executar os teste no cypress
 
